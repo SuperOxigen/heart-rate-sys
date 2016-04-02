@@ -1,0 +1,17 @@
+
+# PlatformIO Files
+
+.pioenvs
+.clang_complete
+.gcc-flags.json
+.travis.yml
+platformio.ini
+lib/readme.txt
+
+# Segment Display Lib
+src/disp_io.h
+src/disp_io.cpp
+src/disp_utils.h
+src/segment.cpp
+src/segment.h
+src/seg_disp.h
