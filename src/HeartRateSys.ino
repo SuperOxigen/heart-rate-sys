@@ -26,12 +26,10 @@ HRMonitor monitor;
 void setup()
 {
     delay(ONE_SECOND);
-    // Serial.begin(9600);
     init_hr_listener();
     pinMode(IR_LIGHT, OUTPUT);
     digitalWrite(IR_LIGHT, HIGH);
     enable_hr_isr();
-    Serial.println("Initialized");
 }
 
 // extern void print_callbacks();
@@ -40,7 +38,7 @@ void loop()
 {
     unsigned int hr;
     char ratebuf[4];
-    delay(ONE_SECOND * 1);
+    delay(ONE_SECOND * 2);
     hr = monitor.get_rate();
     sprintf(ratebuf, "%04u", hr);
     display.write(ratebuf);
